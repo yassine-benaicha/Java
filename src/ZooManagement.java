@@ -5,7 +5,7 @@ public class ZooManagement {
     String zooName = "myZoo";
 
     public static void main(String[] args) {
-        //Instruction 1
+
         ZooManagement z = new ZooManagement();
         System.out.println(z.zooName + " comporte " + z.nbrCages);
 
@@ -13,7 +13,7 @@ public class ZooManagement {
 
 
         Scanner sc = new Scanner(System.in);
-        System.out.println("Veuillez saisir le nombre de cages souhaité:");
+        System.out.println("Veuillez saisir le nombre de cages :");
         int nbrCagesSaisie = sc.nextInt();
         ZooManagement z1 = new ZooManagement();
         z1.nbrCages = nbrCagesSaisie;
