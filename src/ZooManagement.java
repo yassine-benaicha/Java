@@ -7,7 +7,7 @@ public class ZooManagement {
 
     public static void main(String[] args) {
 
-        ZooManagement z = new ZooManagement();
+       ZooManagement z = new ZooManagement();
         System.out.println(z.zooName + " comporte " + z.nbrCages);
 
 
@@ -33,7 +33,7 @@ public class ZooManagement {
         Zoo myZoo = new Zoo();
         myZoo.name = "Belvedere";
         myZoo.city = "Tunis";
-        myZoo.nbrCages = 25;
+
         myZoo.animals = new Animal[25];
 
         Animal lion1 = new Animal("cats", "lion1", 5, true);
@@ -44,6 +44,30 @@ public class ZooManagement {
 
         System.out.println(lion);
         System.out.println(lion.toString());
+
+        //prosit3
+        System.out.println(myZoo.addAnimal(lion));
+        System.out.println(myZoo.addAnimal(lion1));
+
+        myZoo.displayAnimals();
+
+        System.out.println(myZoo.searchAnimal(lion));
+        Animal lion2 = new Animal("cats", "lion1", 5, true);
+        System.out.println(myZoo.searchAnimal(lion1));
+
+
+        System.out.println(myZoo.removeAnimal(lion2));
+        myZoo.displayAnimals();
+
+        Zoo myZoo2 = new Zoo("zoo","benarous");
+        myZoo2.displayZoo();
+        System.out.println(myZoo2.addAnimal(lion));
+        System.out.println(myZoo2.addAnimal(lion1));
+        myZoo2.displayAnimals();
+        System.out.println(myZoo2.isZooFull());
+        System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
+
+
 
     }
 
