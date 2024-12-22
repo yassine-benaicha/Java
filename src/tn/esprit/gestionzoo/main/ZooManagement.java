@@ -1,5 +1,6 @@
 package tn.esprit.gestionzoo.main;
 import tn.esprit.gestionzoo.entities.*;
+import tn.esprit.gestionzoo.entities.enums.Food;
 
 import java.util.Scanner;
 
@@ -72,14 +73,14 @@ public class ZooManagement {
         System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
 
 //prosit5
-     Aquatiques a1 = new Aquatiques();
-     Terrestres t1 = new Terrestres();
+
+    // Terrestres t1 = new Terrestres();
      Dolphin d1 = new Dolphin();
      Penguin p1 = new Penguin();
      Penguin p2 = new Penguin("p2",3,"habitat");
 
      p1.swim();
-     a1.swim();
+
      d1.swim();
 
 //prosit 6
@@ -93,7 +94,19 @@ public class ZooManagement {
      myZoo.displayNumberOfAquaticsByType();
 
      System.out.println(p1.equals(myZoo2));
+     //prosit 8
 
+     Penguin penguin = new Penguin("Wild animals", "Pingu", 3, true, "Ocean", 25.6f);
+     penguin.eatMeat(Food.MEAT);
+
+     Dolphin dolphin = new Dolphin("Delphinoidea", "Willy", 5, true, "Ocean", 34.2f);
+     dolphin.eatMeat(Food.MEAT);
+
+     Terrestres terrestrial = new Terrestres("Bears", "Winnie", 6, true, 4);
+     terrestrial.eatPlantAndMeet(Food.BOTH);
+
+     Terrestres terrestrial2 = new Terrestres("Rabbits", "Bugs bunny", 2, true, 4);
+     terrestrial2.eatPlants(Food.PLANTS);
 
 
 

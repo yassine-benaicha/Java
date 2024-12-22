@@ -1,6 +1,9 @@
 package tn.esprit.gestionzoo.entities;
 
-public class Aquatiques extends Animal{
+import tn.esprit.gestionzoo.entities.enums.Food;
+import tn.esprit.gestionzoo.interfaces.Carnivore;
+
+public abstract class Aquatiques extends Animal implements Carnivore<Food> {
     String habitat;
     public Aquatiques(){
 

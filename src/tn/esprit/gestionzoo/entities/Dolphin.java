@@ -1,5 +1,7 @@
 package tn.esprit.gestionzoo.entities;
 
+import tn.esprit.gestionzoo.entities.enums.Food;
+
 public class Dolphin extends Aquatiques{
     public float swimmingSpeed;
     public Dolphin(){
@@ -12,5 +14,9 @@ public class Dolphin extends Aquatiques{
     }
     public void swim(){
         System.out.println("This dolphin is swimming.");
+    }
+    @Override
+    public void eatMeat(Food meat) {
+
     }
 }
