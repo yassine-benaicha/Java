@@ -25,13 +25,6 @@ public class Animal {
                 ", isMammal:" + isMammal
                 ;
     }
-    public void setAge(int age) {
-        if (age >= 0) {
-            this.age = age;
-        } else {
-            System.out.println("Erreur : L'âge ne peut pas être négatif.");
-        }
-    }
     public String getFamily(){
         return this.family;
     }
@@ -41,7 +34,12 @@ public class Animal {
     public int getAge(){
         return age;
     }
-
+    public void setAge(int age){
+        if(age>0){
+            this.age=age;
+        }
+        System.out.println("l'age doit etre positif");
+    }
     public void setName(String name){
         this.name=name;
     }

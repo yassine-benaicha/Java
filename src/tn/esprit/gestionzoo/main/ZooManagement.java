@@ -16,6 +16,7 @@ public class ZooManagement {
 
 
 
+
         Scanner sc = new Scanner(System.in);
         System.out.println("Veuillez saisir le nombre de cages :");
         int nbrCagesSaisie = sc.nextInt();
