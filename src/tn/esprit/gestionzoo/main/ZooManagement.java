@@ -1,6 +1,5 @@
 package tn.esprit.gestionzoo.main;
-import tn.esprit.gestionzoo.entities.Zoo;
-import tn.esprit.gestionzoo.entities.Animal;
+import tn.esprit.gestionzoo.entities.*;
 
 import java.util.Scanner;
 
@@ -70,6 +69,16 @@ public class ZooManagement {
         myZoo2.displayAnimals();
         System.out.println(myZoo2.isZooFull());
         System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
+
+     Aquatiques a1 = new Aquatiques();
+     Terrestres t1 = new Terrestres();
+     Dolphin d1 = new Dolphin();
+     Penguin p1 = new Penguin();
+
+     p1.swim();
+     a1.swim();
+     d1.swim();
+
 
 
 
