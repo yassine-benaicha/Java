@@ -6,6 +6,8 @@ public class Zoo {
     ;
     private final int nbrCages = 25;
     public int nbrAnimals;
+     public Aquatiques[] aquaticAnimals;
+    int nbAquatic;
 
     public Zoo() {
     }
@@ -14,6 +16,7 @@ public class Zoo {
         animals = new Animal[nbrCages];
         setName(name);
         this.city = city;
+        aquaticAnimals = new Aquatiques[10];
 
     }
     public void displayZoo() {
@@ -77,5 +80,43 @@ public class Zoo {
         } else {
             System.out.println("Erreur : Le nom du zoo ne peut pas être vide.");
         }
+    }
+    public void addAquaticAnimal(Aquatiques aquatic){
+        if (aquaticAnimals == null) {
+            aquaticAnimals = new Aquatiques[10];
+        }
+        if (nbAquatic < aquaticAnimals.length) {
+            aquaticAnimals[nbAquatic] = aquatic;
+            nbAquatic++;
+        } else {
+            System.out.println("No space to add more aquatic animals!");
+
+        }
+    }
+    public float maxPenguinSwimmingDepth(){
+        float maxDepth=0;
+        for(int i=0;i<nbAquatic;i++){
+            // if(aquaticAnimals[i].getClass()==Penguin.class)
+            if(aquaticAnimals[i] instanceof Penguin){
+                if(maxDepth<((Penguin)aquaticAnimals[i]).swimmingDepth){
+                    maxDepth=((Penguin)aquaticAnimals[i]).swimmingDepth;
+                }
+            }
+        }
+        return maxDepth;
+    }
+    public void displayNumberOfAquaticsByType(){
+        int nbD=0;
+        int nbP=0;
+        for(int i=0;i<nbAquatic;i++){
+            if(aquaticAnimals[i] instanceof Penguin){
+                nbP++;
+            }
+            if(aquaticAnimals[i] instanceof Dolphin){
+                nbD++;
+            }
+        }
+        System.out.println("Le zoo :"+name+"contient :"+nbD+" Dolphin et "
+                +nbP+" Penguin");
     }
 }

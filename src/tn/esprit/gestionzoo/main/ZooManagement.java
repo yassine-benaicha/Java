@@ -70,14 +70,29 @@ public class ZooManagement {
         System.out.println(myZoo2.isZooFull());
         System.out.println(myZoo.comparerZoo(myZoo,myZoo2));
 
+//prosit5
      Aquatiques a1 = new Aquatiques();
      Terrestres t1 = new Terrestres();
      Dolphin d1 = new Dolphin();
      Penguin p1 = new Penguin();
+     Penguin p2 = new Penguin("p2",3,"habitat");
 
      p1.swim();
      a1.swim();
      d1.swim();
+
+//prosit 6
+     myZoo.addAquaticAnimal(d1);
+     myZoo.addAquaticAnimal(p1);
+     myZoo.addAquaticAnimal(p2);
+     System.out.println(myZoo.maxPenguinSwimmingDepth());
+
+     Aquatiques a2 =  new Penguin();
+
+     myZoo.displayNumberOfAquaticsByType();
+
+     System.out.println(p1.equals(myZoo2));
+
 
 
 

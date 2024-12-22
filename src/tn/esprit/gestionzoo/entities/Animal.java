@@ -32,4 +32,17 @@ public class Animal {
             System.out.println("Erreur : L'âge ne peut pas être négatif.");
         }
     }
+    public String getFamily(){
+        return this.family;
+    }
+    public String getName(){
+        return name;
+    }
+    public int getAge(){
+        return age;
+    }
+
+    public void setName(String name){
+        this.name=name;
+    }
 }
